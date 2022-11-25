@@ -4,5 +4,14 @@ function tocaSomPom () {
 }
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
+    
+//contador
+let contador = 0;
 
-listaDeTeclas[2].onclick = tocaSomPom
+//Estrutura de repetição While (enquanto)
+while (contador < listaDeTeclas.length) {
+    listaDeTeclas[contador].onclick = tocaSomPom;
+    contador = contador + 1;
+
+    console.log(contador);
+}
