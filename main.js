@@ -7,24 +7,23 @@ function tocaSom (idElementoAudio) {
 const listaDeTeclas = document.querySelectorAll('.tecla');
     
 //contador
-let contador = 0;
+// let contador = 0; foi declarado agora, dentro do
 
-//Estrutura de repetição While (enquanto).While é apenas uma das estruturas de repetição possivel.
+//Estrutura de repetição While (enquanto).While é apenas uma das estruturas de repetição possivel. A 
 
-while (contador < listaDeTeclas.length) {
+for (let contador = 0; contador < listaDeTeclas.length; contador++) {
 
     const tecla = listaDeTeclas[contador];
-    const instrumento = tecla.classList[1];
-    //template string
-    const idAudio = `#som_${instrumento}`;
+    const instrumento = tecla.classList[1];  
+    const idAudio = `#som_${instrumento}`;//template string
    // console.log(idAudio);
 
     tecla.onclick = function () {
         tocaSom(idAudio)
     }
-    contador = contador + 1;
+    // contador = contador + 1; comentado pois com a adição do ++ no for, essa linha foi subistiduida 
 
-    //console.log(contador);
+    console.log(contador);
 }
 
 //Funções anonimas (function ()) só podem ser usadas quando são o valor de algum atributo ou armazenadas com valor fariavel
